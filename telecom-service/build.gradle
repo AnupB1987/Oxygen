@@ -1,0 +1,24 @@
+apply plugin: 'java'
+apply plugin: 'eclipse-wtp'
+apply plugin: 'war'
+apply plugin: 'maven'
+
+group = 'corp.telecom-service'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = 1.8
+
+repositories {
+	mavenCentral()
+}
+
+configurations {
+	providedRuntime
+}
+
+dependencies {
+
+	// https://mvnrepository.com/artifact/org.springframework/spring-webmvc
+	compile group: 'org.springframework', name: 'spring-webmvc', version: '4.3.14.RELEASE'	
+	// https://mvnrepository.com/artifact/junit/junit
+	testCompile group: 'junit', name: 'junit', version: '4.11'
+}
