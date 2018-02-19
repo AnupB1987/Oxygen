@@ -1,12 +1,18 @@
 package corp.telecomservice.model;
 
-import org.springframework.stereotype.Component;
-
 public class PhoneAccount {
 	private long phoneAccountId;
-	private String firstName;
-	private String lastName;
 	private PlanType planType;
+	private int availableMinutes;
+	private int numberOfConnection;
+
+	public PhoneAccount(long phoneAccountId, PlanType planType, int availableMinutes, int numberOfConnection) {
+		super();
+		this.phoneAccountId = phoneAccountId;
+		this.planType = planType;
+		this.availableMinutes = availableMinutes;
+		this.numberOfConnection = numberOfConnection;
+	}
 
 	public long getPhoneAccountId() {
 		return phoneAccountId;
@@ -14,22 +20,6 @@ public class PhoneAccount {
 
 	public void setPhoneAccountId(long phoneAccountId) {
 		this.phoneAccountId = phoneAccountId;
-	}
-
-	public String getFirstName() {
-		return firstName;
-	}
-
-	public void setFirstName(String firstName) {
-		this.firstName = firstName;
-	}
-
-	public String getLastName() {
-		return lastName;
-	}
-
-	public void setLastName(String lastName) {
-		this.lastName = lastName;
 	}
 
 	public PlanType getPlanType() {
@@ -40,4 +30,19 @@ public class PhoneAccount {
 		this.planType = planType;
 	}
 
+	public int getAvailableMinutes() {
+		return availableMinutes;
+	}
+
+	public void setAvailableMinutes(int availableMinutes) {
+		this.availableMinutes = availableMinutes;
+	}
+
+	public int getNumberOfConnection() {
+		return numberOfConnection;
+	}
+
+	public void setNumberOfConnection(int numberOfConnection) {
+		this.numberOfConnection = numberOfConnection;
+	}
 }
