@@ -1,17 +1,35 @@
-package corp.telecomservice.model;
+package corp.telecomservice.entity;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="PHONE_ACCOUNT")
 public class PhoneAccount {
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	@Column(name="PH_ACC_ID")
 	private long phoneAccountId;
+	
+	@Enumerated(EnumType.STRING)
+	@Column(name = "PLAN_TYPE", unique = true)
 	private PlanType planType;
+	
+	@Column(name="AVAILABLE_MINUTES", nullable=false)
 	private int availableMinutes;
+	
+	@Column(name="NO_OF_CONNECTION", nullable=false)
 	private int numberOfConnection;
 
-	public PhoneAccount(long phoneAccountId, PlanType planType, int availableMinutes, int numberOfConnection) {
-		super();
-		this.phoneAccountId = phoneAccountId;
-		this.planType = planType;
-		this.availableMinutes = availableMinutes;
-		this.numberOfConnection = numberOfConnection;
+	public PhoneAccount() {
+		// no-ope
 	}
 
 	public long getPhoneAccountId() {
