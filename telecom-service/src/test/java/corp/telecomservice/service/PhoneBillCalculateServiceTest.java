@@ -4,9 +4,9 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
+import corp.telecomservice.entity.PhoneAccount;
+import corp.telecomservice.entity.PlanType;
 import corp.telecomservice.exeption.PlanNotFoundExeption;
-import corp.telecomservice.model.PhoneAccount;
-import corp.telecomservice.model.PlanType;
 
 public class PhoneBillCalculateServiceTest {
 	private PhoneBillCalculateService service;

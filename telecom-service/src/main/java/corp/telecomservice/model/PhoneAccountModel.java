@@ -1,17 +1,17 @@
 package corp.telecomservice.model;
 
-public class PhoneAccount {
+public class PhoneAccountModel {
+	
 	private long phoneAccountId;
-	private PlanType planType;
+	
+	private String planType;
+	
 	private int availableMinutes;
+	
 	private int numberOfConnection;
 
-	public PhoneAccount(long phoneAccountId, PlanType planType, int availableMinutes, int numberOfConnection) {
-		super();
-		this.phoneAccountId = phoneAccountId;
-		this.planType = planType;
-		this.availableMinutes = availableMinutes;
-		this.numberOfConnection = numberOfConnection;
+	public PhoneAccountModel() {
+		// no-ope
 	}
 
 	public long getPhoneAccountId() {
@@ -22,11 +22,11 @@ public class PhoneAccount {
 		this.phoneAccountId = phoneAccountId;
 	}
 
-	public PlanType getPlanType() {
+	public String getPlanType() {
 		return planType;
 	}
 
-	public void setPlanType(PlanType planType) {
+	public void setPlanType(String planType) {
 		this.planType = planType;
 	}
 
